@@ -104,7 +104,7 @@ job_count = 0
 COUNTRY = "usa"
 RESULTS_PER_QUERY = 10 # realistic maximum from Indeed
 
-DATA_DIR="data"
+DATA_DIR="apify_storage/data"
 
 MASTER_FILE =os.path.join(DATA_DIR, "indeed_ai_ml_master.csv")
 BATCH_FILE =os.path.join(DATA_DIR, "indeed_ai_ml_batch.csv")
