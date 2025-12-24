@@ -1,0 +1,13 @@
+# Ignore all CSV output
+*.csv
+
+# Ignore data directory
+data/
+apify_storage/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
