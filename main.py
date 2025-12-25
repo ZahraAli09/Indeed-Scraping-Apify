@@ -129,10 +129,13 @@ async def main():
     async with Actor:
 
         # 🔹 CREATE APIFY PROXY (FREE PLAN SAFE)
-        proxy_url = await Actor.create_proxy_configuration(
-            groups=["DATACENTER"]
-        ).new_url()
+        proxy_config = await Actor.create_proxy_configuration(
+            groups=["DATACENTER"],
+            country_code="US"
+        )
+        
 
+        proxy_url=await proxy_config.new_url()
         # 🔹 FORCE REQUESTS / JOBSPY TO USE PROXY
         os.environ["HTTP_PROXY"] = proxy_url
         os.environ["HTTPS_PROXY"] = proxy_url
